@@ -1,0 +1,33 @@
+import pandas as pd
+import numpy as np
+data = pd.read_csv("Salaries.csv")
+# print(data)
+
+# print(data.head(10))
+# print(data.tail(10))
+# print(f"Number of Rows: {data.shape[0]}\nNumber of Columns: {data.shape[1]}")
+# print(data.info())
+# print(data.isnull().sum())
+# data.drop(["Id", "Notes", "Agency", "Status"], axis=1, inplace=True)
+# print(data.columns)
+# print(data.describe(include="all"))
+# print(data["EmployeeName"].value_counts().head((5)))
+# print(data["JobTitle"].str.contains("Captain", case=False).sum())
+# print(data[data["JobTitle"].str.contains("Fire", case=False)]["EmployeeName"])
+# print(data["BasePay"].describe( include="all"))
+# data["BasePay"]=pd.to_numeric(data["BasePay"], errors="coerce")
+# # print(data["BasePay"].mean())
+# print(data["BasePay"].describe(include="all"))
+# data["EmployeeName"] = data["EmployeeName"].replace(
+#     ["Not provided", "Not Provided"], np.nan
+# )
+# print(data["EmployeeName"])
+# data.drop(data[data.isnull().sum(axis=1)==3].index, axis=0, inplace=True)
+# print(data.isnull().sum(axis=1))
+# print(data[data["EmployeeName"].str.contains("ALBERT PARDINI", case=False)]["JobTitle"])
+# print(data[data["EmployeeName"]=="ALBERT PARDINI"]["JobTitle"]))
+data["BasePay"] = pd.to_numeric(data["BasePay"], errors="coerce")
+# print(data["BasePay"].max())
+# print(data[data["BasePay"].max() == data["BasePay"]]["EmployeeName"])
+print(data[data["JobTitle"]=="ACCOUNTANT"]["BasePay"].mean())
+print(data["JobTitle"].value_counts().head(5))
