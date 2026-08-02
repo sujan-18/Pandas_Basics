@@ -24,4 +24,3 @@ import numpy as np
 # data.drop_duplicates(inplace=True) # Drop duplicate rows
 # print(data.duplicated().any()) # Check for duplicate rows
 # data.describe() # Summary statistics for numerical columns
-
