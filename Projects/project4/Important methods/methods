@@ -1,0 +1,206 @@
+..........................................................................................
+
+Level 1: Data Inspection (Know Your Data)
+
+These are the first methods you use after loading a dataset.
+
+Method	Purpose	Why use it?
+head()	Show first rows	Quickly inspect data
+tail()	Show last rows	Check the end of the dataset
+sample()	Random rows	Inspect random records
+shape	Number of rows and columns	Understand dataset size
+info()	Column types and missing values	Most important first inspection
+describe()	Statistical summary	Understand numeric columns
+columns	Column names	Useful for selecting and renaming
+index	Row labels	Understand indexing
+dtypes	Data type of each column	Know how Pandas interprets data
+memory_usage()	Memory consumed	Optimize large datasets
+
+.......................................................................................
+
+Level 2: Selecting Data
+
+Probably the most used operations in Pandas.
+
+Method	Purpose
+[]	Select columns
+.loc[]	Label-based selection
+.iloc[]	Position-based selection
+.at[]	Fast access to one value
+.iat[]	Fast integer-position access
+.query()	SQL-like filtering
+.filter()	Select columns by name or pattern
+..........................................................................................
+
+Level 3: Cleaning Data
+
+This is where analysts spend most of their time.
+
+Method	Purpose
+isnull()	Find missing values
+notnull()	Opposite of isnull()
+dropna()	Remove missing rows
+fillna()	Replace missing values
+replace()	Replace specific values
+map()	Convert values using a dictionary
+astype()	Change data type
+rename()	Rename columns
+drop()	Remove rows or columns
+duplicated()	Find duplicates
+drop_duplicates()	Remove duplicates
+clip()	Limit values to a range
+
+................................................................................................
+
+Level 4: Sorting
+Method	Purpose
+sort_values()	Sort by column values
+sort_index()	Sort by row index
+nlargest()	Largest values
+nsmallest()	Smallest values
+
+..................................................................................................
+
+Level 5: Creating New Columns
+Method	Purpose
+assign()	Create new columns
+insert()	Insert at a specific position
+apply()	Apply a function
+map()	Value mapping
+applymap() (DataFrames)	Apply to every element
+transform()	Return transformed values while keeping the original shape
+
+......................................................................................................
+
+Level 6: Grouping and Aggregation
+
+These are essential for EDA and reporting.
+
+Method	Purpose
+groupby()	Split data into groups
+agg()	Multiple aggregations
+mean()	Average
+sum()	Total
+count()	Count non-null values
+size()	Count rows
+max()	Maximum
+min()	Minimum
+median()	Middle value
+std()	Standard deviation
+var()	Variance
+nunique()	Number of unique values
+value_counts()	Count occurrences
+
+.........................................................................................................
+
+Level 7: Combining Data
+Method	Purpose
+merge()	SQL-style joins
+join()	Join by index
+concat()	Stack DataFrames
+append()	Deprecated (use concat())
+
+............................................................................................................
+
+Level 8: Reshaping Data
+Method	Purpose
+pivot()	Reshape data
+pivot_table()	Pivot with aggregation
+melt()	Wide → Long format
+stack()	Columns → Rows
+unstack()	Rows → Columns
+explode()	Expand list values into rows
+
+............................................................................................................
+
+Level 9: String Operations
+
+Very common in data cleaning.
+
+Method	Purpose
+str.lower()	Lowercase
+str.upper()	Uppercase
+str.strip()	Remove spaces
+str.replace()	Replace text
+str.contains()	Search text
+str.split()	Split strings
+str.extract()	Extract using regex
+str.startswith()	Starts with
+str.endswith()	Ends with
+
+..................................................................................................................
+
+Level 10: Date & Time
+Method	Purpose
+to_datetime()	Convert to datetime
+.dt.year	Extract year
+.dt.month	Extract month
+.dt.day	Extract day
+.dt.weekday	Day of week
+.dt.hour	Hour
+.dt.date	Date only
+
+..................................................................................................................
+
+Level 11: Statistics
+Method	Purpose
+mean()	Average
+median()	Median
+mode()	Most frequent
+std()	Standard deviation
+var()	Variance
+corr()	Correlation
+cov()	Covariance
+quantile()	Percentiles
+rank()	Ranking
+
+.......................................................................................................................
+
+Level 12: Performance
+Method	Purpose
+astype('category')	Reduce memory
+memory_usage()	Check memory
+copy()	Avoid modifying originals
+eval()	Faster expressions
+query()	Faster filtering in many cases
+
+..............................................................................................................
+
+Level 13: Useful Attributes
+
+Notice these don't use parentheses because they are attributes, not methods.
+
+Attribute	Meaning
+.shape	Rows and columns
+.size	Total elements
+.ndim	Number of dimensions
+.index	Row labels
+.columns	Column names
+.values	NumPy array
+.dtypes	Data types
+.empty	Is the DataFrame empty?
+.T	Transpose
+
+...............................................................................................................
+Level 14: Missing Value Analysis
+Method	Purpose
+isna()	Missing values
+notna()	Non-missing values
+sum()	Count missing values
+fillna()	Fill missing values
+dropna()	Remove missing values
+
+.................................................................................................................
+
+Level 15: Input/Output
+Method	Purpose
+read_csv()	Read CSV
+read_excel()	Read Excel
+read_json()	Read JSON
+to_csv()	Save CSV
+to_excel()	Save Excel
+to_json()	Save JSON
+
+.................................................................................................................
+
+
