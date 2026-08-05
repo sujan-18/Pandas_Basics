@@ -19,7 +19,6 @@ memory_usage()	Memory consumed	Optimize large datasets
 .......................................................................................
 
 Level 2: Selecting Data
-
 Probably the most used operations in Pandas.
 
 Method	Purpose

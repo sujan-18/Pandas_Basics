@@ -1,0 +1,40 @@
+import pandas as pd
+data = pd.read_csv("train.csv")
+# print(data.head())
+# print(data.tail(3))
+# print(data.shape)
+# print(data.shape[0])
+# print(data.shape[1])
+# print(data.info())
+# print(data.describe())
+# print(data.columns)
+# print(data['Name'])
+# print(data[['Name', 'Age']])
+# print(data['sex']=='male')
+# print(data.isnull().sum())
+
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# sns.heatmap(data.isnull())
+# plt.show()
+# print(data.isnull().sum()*100/len(data))
+
+# print(data["Embarked"].value_counts())
+# print(data["Embarked"].mode())
+# print(data[data["Embarked"].isnull()])
+# data["Embarked"]=data["Embarked"].fillna("s",inplace=True)
+# print(data["Embarked"].isnull().sum())
+# print(data.columns)
+# print(data["Age"].value_counts())
+# print(data["Age"].isnull().sum())
+# print(data["Age"].isnull().value_counts())
+# print(data[data["Age"].isnull()])
+# data["Age"] = data["Age"].fillna(18)
+# x = data["Sex"].map({'male': 0, 'female': 1})
+# print(data['Sex'].value_counts())
+
+# print(data['Sex'])
+# data.insert(5,"Gender",data["Sex"])
+# print(data["Gender"])
+# print(data.columns)
