@@ -38,3 +38,50 @@ import matplotlib.pyplot as plt
 # data.insert(5,"Gender",data["Sex"])
 # print(data["Gender"])
 # print(data.columns)
+# print(data['Embarked'].value_counts())
+# data['Embarked'] = data['Embarked'].map({'S': 0, 'C': 1, 'Q': 2})
+# print(data['Embarked'])
+# print(pd.get_dummies(data,columns=['Embarked'], dtype=int))
+# print(pd.get_dummies(data,columns=['Embarked']))
+# print(pd.get_dummies(data,columns=['Embarked'], drop_first=True))
+# print(data['Survived'].value_counts())
+# sns.countplot(data['Survived'])
+# plt.show()
+# import seaborn as sns
+# import matplotlib.pyplot as plt
+
+# print(data["Pclass"].value_counts())
+
+# sns.countplot(x="Pclass", data=data)
+# plt.show()
+
+# sex=data['Sex'].value_counts()
+# import seaborn as sns
+# import matplotlib.pyplot as plt
+# sns.countplot(x='Sex', data=data)
+# plt.show()
+
+# for numeric data
+# plt.hist(data['Age'])
+# plt.show()
+
+# sns.histplot(data['Age'])
+# plt.show()
+
+# sns.boxplot(data['Age'])
+# plt.show()
+
+# sns.countplot() → Categorical data
+# sns.histplot() → Numerical distributions
+# sns.boxplot() → Outlier detection and comparison
+# plt.hist() → Learn it because it's the underlying Matplotlib function, but prefer sns.histplot() in most analysis projects.
+# sns.barplot(x='Sex', y='Survived', data=data)
+# plt.show()
+
+# sns.barplot(x='Pclass', y='Survived', data=data)
+# plt.show()
+
+# Feature Engineering
+data['FamilySize'] = data['SibSp'] + data['Parch'] + 1
+# print(data['FamilySize'])
+print(data.head(1))
